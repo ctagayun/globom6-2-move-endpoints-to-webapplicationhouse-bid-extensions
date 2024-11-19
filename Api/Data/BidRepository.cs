@@ -19,10 +19,14 @@ public class BidRepository: IBidRepository
     public async Task<List<BidDto>> Get(int houseId)
     {
         //*we use a LINQ Where "Method" syntax using Lambda
-        return await context.Bids.Where(b => b.HouseId == houseId) //*where the Bids.HouseId = houseId param
-            //*after the Where we project the Bid entities into DTOs and convert result into a List
+       // return await context.Bids.Where(b => b.HouseId == houseId) //*where the Bids.HouseId = houseId param
+       //*after the Where we project the Bid entities into DTOs and convert result into a List
+        //    .Select(b => new BidDto(b.Id, b.HouseId, b.Bidder, b.Amount))
+       //     .ToListAsync(); 
+
+       return await context.Bids.Where(b => b.HouseId == houseId)
             .Select(b => new BidDto(b.Id, b.HouseId, b.Bidder, b.Amount))
-            .ToListAsync(); 
+            .ToListAsync();     
     }
 
     //* The add method returns a BidDto and accept one too (dto to be added to database)

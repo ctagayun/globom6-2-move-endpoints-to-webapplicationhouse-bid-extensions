@@ -8,14 +8,14 @@ public static class WebApplicationBidExtensions
   //*Copy MapGet, MapPost, MapPut, MapDelete from program.cs
    public static void MapBidEndpoints(this WebApplication app)
    {
-//      app.MapGet("/house/{houseId:int}/bids", async (int houseId, 
-//         IHouseRepository houseRepo, IBidRepository bidRepo) =>
-//         {
-//             if (await houseRepo.Get(houseId) == null)
-//                 return Results.Problem($"House with Id {houseId} not found", statusCode: 404);
-//             var bids = await bidRepo.Get(houseId);
-//             return Results.Ok(bids);
-//         }).ProducesProblem(404).Produces(StatusCodes.Status200OK);
+     app.MapGet("house/{houseId:int}/bids", async (int houseId, 
+        IHouseRepository houseRepo, IBidRepository bidRepo) =>
+        {
+            if (await houseRepo.Get(houseId) == null)
+                return Results.Problem($"House with Id {houseId} not found", statusCode: 404);
+            var bids = await bidRepo.Get(houseId);
+            return Results.Ok(bids);
+        }).ProducesProblem(404).Produces(StatusCodes.Status200OK);
 
 //         app.MapPost("/house/{houseId:int}/bids", 
 //            async (int houseId, [FromBody] BidDto dto, IBidRepository repo) => 
