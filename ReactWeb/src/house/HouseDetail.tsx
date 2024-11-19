@@ -1,4 +1,4 @@
-//import Bids from "../bids/Bids";
+import Bids from "../bids/Bids";
 import { Link, useParams } from "react-router-dom";
 import { useDeleteHouse, useFetchHouse } from "../hooks/HouseHooks";
 import ApiStatus from "../apiStatus";
@@ -73,7 +73,8 @@ const HouseDetail = () => {
         <div className="row">
           <div className="col-12 mt-3">{data.description}</div>
         </div>
-        {/* <Bids house={data} /> */}
+          //* Add the BidsComponent
+         <Bids house={data} /> 
       </div>
     </div>
   );

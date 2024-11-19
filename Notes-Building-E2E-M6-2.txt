@@ -412,3 +412,14 @@ Module 6: Working withe related data add bid component
          bloated. Solution: //*The class gets a littlebit bloated now. To solve this problem we can 
          create WebApplicationHouseExtensions  and WebApplicationBidExtensions and copy accordingly 
          the house and bid EP to these files
+
+   - React Adding hooks
+       - https://app.pluralsight.com/ilx/video-courses/fbbac3b2-0e56-464b-92f2-0b877f92f12c/4f28ee7a-2200-4d8a-b6c1-fcc044126a0d/ab5210ee-02ac-4ec8-94f9-16160de1a564
+
+       - 
+   - React Displaying and Adding Data
+      - https://app.pluralsight.com/ilx/video-courses/fbbac3b2-0e56-464b-92f2-0b877f92f12c/4f28ee7a-2200-4d8a-b6c1-fcc044126a0d/56c96f54-6f09-4687-ac2d-1a459236ff48
+
+      -create a BidComponent.tsx in src/Bid folder
+
+      - next add the BidComponent to the src/house/HouseDetailComponent.tsx
